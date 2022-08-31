@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: MarkGEO, sans-serif;
+}
+
+@font-face {
+    font-family: MarkGEO;
+    src: url(./fonts/MarkGEO-Regular.woff2);
+}
+
+@font-face {
+    font-family: MarkGEOBold;
+    src: url(./fonts/MarkGEOCAPS-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: MarkGEOMenu;
+    src: url(./fonts/MarkGEO-Medium.woff2);
+}
+
+:root {
+    --background-color: #091a2b;
+    --header-icons-color: rgba(255, 255, 255, 0.78);
+    --slider-overlay: linear-gradient(to bottom, rgba(43, 25, 25, 0.3), #2b1919);
+    --orange-color: #fb8d04;
+}
+
+.container {
+    width: 1296px;
+    margin: auto;
+}
+
+
+.top-header-section{
+    background-color: var(--background-color);
+    height: 78px;
+}
+
+.top-header{
+    padding-top: 20px;
+    display: flex;
+}
+
+.top-header-menu ul{
+    display: flex;
+    padding-top: 8px;
+    margin-right: 150px;
+    margin-left: 5px;
+}
+
+
+
+.top-header-menu-item{
+    align-items: center;
+    text-decoration: none;
+    margin-right: 25px;
+    color: #bdc2c6;
+    font-size: 14px;
+}
+
+
+.top-header-icons{
+    display: flex;
+    margin-right: 25px;
+    margin-top: -5px;
+}
+
+.top-header-icons svg{
+    color: var(--header-icons-color);
+    margin-right: 25px;
+}
+
+
+
+.top-header-buttons{
+    display: flex;
+}
+
+.top-header-buttons svg{
+    color: white;
+    border-radius: 50%;
+    background-color: var(--orange-color);
+    padding: 5px;
+    margin-right: 5px;
+}
+
+
+.ibank{
+    font-size: 12px;
+    color: var(--orange-color);
+    margin-top: 15px;
+    font-weight: 500; 
+}
+
+.language {
+    margin-top: 11px;
+    margin-left: 50px;
+}
+
+.language a{
+    color: var(--header-icons-color);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+.be-solo {
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 125px;
+    height: 32px;
+    background-color: var(--orange-color);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-top: 3px;
+}
+
+.be-solo a span{
+    color: var(--header-icons-color);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "MarkGEOBold";
+}
+
+
+
+
+
+
+
+.menu-section{
+    height: 58px;
+    background-color: #2b3a48;
+}
+
+.menu ul{
+    display: flex;
+    padding-top: 20px;
+    margin-left: -45px;
+}
+
+.menu ul li{
+    padding-right: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "MarkGEOMenu";
+}
+
+.menu ul li a{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+
+.slider-section{
+    background-color: var(--background-color);
+    height: 510px;
+}
+
+.slider{
+    padding-top: 65px;
+}
+
+.slider-title{
+    height: 50px;
+    color: white;
+}
+
+.slider-title h2{
+    font-family: "MarkGEOBold";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.slider-img{
+    height: 300px;
+    background-image: url(./imgs/slider.png);
+    margin-top: 32px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.overlay{
+    background-image: var(--slider-overlay);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 100px;
+    border-radius: 10px;
+
+}
+
+
+h4{
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "MarkGEOMenu";
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 35px;
+}
+
+.slider-button a{
+    background-color: var(--orange-color);
+    color: white;
+    margin-left: 40px;
+    font-family: "MarkGEOBold";
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* hovers */
+.menu ul li a:hover{
+    color: white;
+}
+
+
+
+/* actives */
+.active-top-header-menu{
+    color: var(--orange-color);
+}
+
+
+
+
+
+
+
