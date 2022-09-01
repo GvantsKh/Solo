@@ -22,11 +22,26 @@
     src: url(./fonts/MarkGEO-Medium.woff2);
 }
 
+@font-face {
+    font-family: MarkGEOContent;
+    src: url(./fonts/MarkGEOCAPS-Light.woff2);
+}
+
+
 :root {
     --background-color: #091a2b;
     --header-icons-color: rgba(255, 255, 255, 0.78);
     --slider-overlay: linear-gradient(to bottom, rgba(43, 25, 25, 0.3), #2b1919);
     --orange-color: #fb8d04;
+    --input-orange: #fc6719;
+    --top-header-menu:#bdc2c6;
+    --menu-background:#2b3a48;
+    --text-color:rgba(255, 255, 255, 0.9);
+    --input-background:#1c2b3b;
+    --border:#b1b1b1;
+    --input-border:rgba(255, 255, 255, 0.3);
+    --footer-language:rgba(255, 255, 255, 0.03);
+    --dark-border: #2b3948;
 }
 
 .container {
@@ -34,7 +49,7 @@
     margin: auto;
 }
 
-
+/* top header styles */
 .top-header-section{
     background-color: var(--background-color);
     height: 78px;
@@ -53,12 +68,11 @@
 }
 
 
-
 .top-header-menu-item{
     align-items: center;
     text-decoration: none;
     margin-right: 25px;
-    color: #bdc2c6;
+    color: var(--top-header-menu);
     font-size: 14px;
 }
 
@@ -73,8 +87,6 @@
     color: var(--header-icons-color);
     margin-right: 25px;
 }
-
-
 
 .top-header-buttons{
     display: flex;
@@ -129,18 +141,18 @@
 
 
 
-
-
-
+/* menu styles */
 .menu-section{
     height: 58px;
-    background-color: #2b3a48;
+    background-color: var(--menu-background);
 }
+
 
 .menu ul{
     display: flex;
     padding-top: 20px;
     margin-left: -45px;
+
 }
 
 .menu ul li{
@@ -151,13 +163,13 @@
 }
 
 .menu ul li a{
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
 }
 
 
 
 
-
+/* slider styles */
 .slider-section{
     background-color: var(--background-color);
     height: 510px;
@@ -220,6 +232,212 @@ h4{
 
 
 
+/* content header styles */
+.content-section{
+    background-color: var(--background-color);
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.content-title h4{
+    font-size: 18px;
+    font-family: "MarkGEOMenu";
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.content-filter{
+    display: flex;
+}
+
+
+.input{
+    caret-color: var(--input-orange);
+    outline: none;
+    background-color: var(--input-background);
+    width: 100%;
+    white-space: nowrap;
+    height: 40px;
+    padding: 16px 24px;
+    border-radius: 50px;
+    color: #5a6670;
+    margin-right: 30px;
+}
+
+.order{
+    border-radius: 2px;
+    font-size: 14px;
+    color: white;
+    padding: 8px 16px;
+    height: 40px;
+    width: 250px;
+    border: 1px solid var(--dark-border);
+}
+
+
+
+/* content left side styles */
+.content{
+    display: flex;
+}
+
+
+.content-categories{
+    margin-bottom: 24px;
+    width: 236px;
+    padding-top: 8px;
+    padding-bottom: 32px;
+    margin-right: 32px;
+}
+
+.countries{
+    border: 1px solid var(--border);
+    background-color: var(--input-background);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.district-input{
+    caret-color: var(--input-orange);
+    outline: none;
+    background-color: #111923;
+    width: 70%;
+    white-space: nowrap;
+    height: 20px;
+    padding: 16px;
+    border-radius: 50px;
+    color: #5a6670;
+}
+
+#district{
+    height: 205px;
+    overflow: scroll;
+}
+
+.content-categories span{
+    font-weight: 13px;
+    color: var(--text-color);
+    font-family: "MarkGEO";
+}
+
+#cat-title{
+    color: #8b8b8b;
+    margin-left: 32px;
+}
+
+.content-categories input{
+    accent-color: var(--input-orange);
+    margin-top: 15px;
+    margin-right: 8px;
+    margin-left: 32px;
+    border-radius: 2px;
+    border:2px solid var(--input-border);
+}
+
+
+.square-inputs{
+    display: flex;
+}
+
+.square-input{
+    caret-color: var(--input-orange);
+    outline: none;
+    background-color: #111923;
+    width: 30%;
+    white-space: nowrap;
+    height: 20px;
+    padding: 16px;
+    border-radius: 50px;
+    color: #5a6670;
+}
+
+
+
+/* content item styles */
+
+.content-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+}
+
+.content-item{
+    border-radius: 4px;
+    /* border: 1px solid rgb(224, 224, 224); */
+    border: 1px solid var(--dark-border);
+
+    padding: 24px;
+    position: relative;
+    width: 320px;
+    height: 350px;
+}
+
+.content-item img{
+    margin-bottom: 8px;
+    height: 165px;
+}
+
+.text-content-title{
+    color: var(--text-color);
+    font-family: "MarkGEO";
+    font-size: 12px;
+}
+
+.text-content-offer{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-content-desc{
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.content-link{
+    color: var(--orange-color);
+    font-size: 14px;
+}
+
+
+
+
+/* footer styles */
+.footer-section{
+    background-color: var(--background-color);
+    height: 78px;
+}
+
+.footer{
+    border-top: 2px solid  var(--dark-border);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img{
+    width: 92px;
+    margin-left: 40px;
+}
+
+.footer-title{
+    color: white;
+    font-size: 14px;
+}
+
+.footer-language{
+    background-color: var(--footer-language);
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+    margin-right: 40px;
+    padding: 10px 10px 10px;
+    margin-top: -10px;
+}
 
 
 
@@ -228,6 +446,9 @@ h4{
     color: white;
 }
 
+.order:hover{
+    border: 1px solid var(--input-border);
+}
 
 
 /* actives */

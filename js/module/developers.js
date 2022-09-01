@@ -42,13 +42,44 @@ export class Devs extends Base {
        .join(" ");
     }
 
+    _getCountries(){
+        return this.appJson.countries.map((obj) => {
+            return `<input type="checkbox"><span>${obj.title}</span><br>`
+       })
+       .join(" ");
+    }
 
+    _getDistrict(){
+        return this.appJson.district.map((obj) => {
+            return `<input type="checkbox"><span>${obj.title}</span><br>`
+       })
+       .join(" ");
+    }
+
+    _getSquare(){
+        return this.appJson.square.map((obj) => {
+            return `<input type="radio"><span>${obj.title}</span><br>`
+       })
+       .join(" ");
+    }
+
+    _getStatus(){
+        return this.appJson.status.map((obj) => {
+            return `<input type="checkbox"><span>${obj.title}</span><br>`
+       })
+       .join(" ");
+    }
 
     _render() {
         this._setContent('topHeaderMenu', this._getTopHeaderMenu());
         this._setContent('menu', this._getMenu());
         this._setContent('slider', this._getSlider());
+        this._setContent('countries', this._getCountries());
+        this._setContent('district', this._getDistrict());
+        this._setContent('square', this._getSquare());
+        this._setContent('status', this._getStatus());
 
     }
+
 
 }
