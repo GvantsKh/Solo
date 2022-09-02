@@ -1,19 +1,14 @@
 import {Content} from "../module/content.js";
 import { soloUrl } from "./config.js";
+import { params } from "./common.js";
 
 
 export function getLink(arr, link, value){
     let res = link;
     
     if(value === null){
-            res = res+'skip='+arr.skip+'&limit='+arr.limit;         
-    }
-
-    else{
-        for (let i = 0; i < arr.length; i++){
-            res = res+value+arr.value+'?limit='+arr[i].limit+'&api_key='+arr[i].api_key+'&fmt='+arr[i].fmt;         
-        }
-    }
+             res = res+'skip='+params[0]+'&limit='+params[1];         
+     }
     
     return res; 
 }
@@ -44,3 +39,31 @@ export function getContent(link){
     });
 }
 
+
+
+export function getFilters (arr, className){
+    
+    let filterItem = document.getElementsByClassName(className);
+
+    for (let i = 0; i < filterItem.length; i++) {
+            
+        let filterElem = filterItem[i];
+        let searchValue = filterElem.value;
+
+        filterElem.addEventListener('click', () => {
+            if(filterElem.checked === true){
+                arr.push(searchValue);
+            }
+            else{
+                for(let j=0; j<arr.length; j++){
+                    if(arr[j] === searchValue){
+                        arr.splice(j,1)
+                    }
+                }
+            }
+        console.log(arr)
+        getContent(getLink(arr, soloUrl, className));
+
+        })
+    }
+}

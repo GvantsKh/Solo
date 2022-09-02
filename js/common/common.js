@@ -179,12 +179,9 @@ export const app = {
 }
 
 
-export const params = {
-        skip: '0',
-        limit: '9',
-        cityParam: '',
-        districtParam: '',
-        priceFrom: '',
-        priceTo: '',
-        typeParam: ''
-}
+export const params = ['0', '9'];
+
+
+export const cityParam =[];
+export const districtParam =[];
+export const typeParam =[];

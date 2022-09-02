@@ -44,14 +44,14 @@ export class Devs extends Base {
 
     _getCountries(){
         return this.appJson.countries.map((obj) => {
-            return `<input type="checkbox"><span>${obj.title}</span><br>`
+            return `<input class="country" type="checkbox" value="${obj.title}"><span>${obj.title}</span><br>`
        })
        .join(" ");
     }
 
     _getDistrict(){
         return this.appJson.district.map((obj) => {
-            return `<input type="checkbox"><span>${obj.title}</span><br>`
+            return `<input class="district" type="checkbox" value="${obj.title}"><span>${obj.title}</span><br>`
        })
        .join(" ");
     }
@@ -65,7 +65,7 @@ export class Devs extends Base {
 
     _getStatus(){
         return this.appJson.status.map((obj) => {
-            return `<input type="checkbox"><span>${obj.title}</span><br>`
+            return `<input class="status" type="checkbox" value="${obj.title}"><span>${obj.title}</span><br>`
        })
        .join(" ");
     }
