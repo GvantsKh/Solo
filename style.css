@@ -106,11 +106,13 @@
     color: var(--orange-color);
     margin-top: 15px;
     font-weight: 500; 
+    padding: 3px;
 }
 
 .language {
     margin-top: 11px;
     margin-left: 50px;
+    padding: 3px;
 }
 
 .language a{
@@ -259,7 +261,7 @@ h4{
     caret-color: var(--input-orange);
     outline: none;
     background-color: var(--input-background);
-    width: 100%;
+    width: 50%;
     white-space: nowrap;
     height: 40px;
     padding: 16px 24px;
@@ -286,7 +288,7 @@ h4{
 }
 
 
-.content-categories{
+.content-filters{
     margin-bottom: 24px;
     width: 236px;
     padding-top: 8px;
@@ -294,11 +296,14 @@ h4{
     margin-right: 32px;
 }
 
-.countries{
+.filters{
     border: 1px solid var(--border);
     background-color: var(--input-background);
     border-radius: 10px;
     margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    padding-right: 20px;
 }
 
 .district-input{
@@ -316,20 +321,31 @@ h4{
 #district{
     height: 205px;
     overflow: scroll;
+    overflow-x: hidden; 
+    
+}
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-.content-categories span{
-    font-weight: 13px;
+::-webkit-scrollbar-thumb {
+    background: #bdc2c6;
+  }
+
+.content-filters span{
+    font-weight: 500;
     color: var(--text-color);
     font-family: "MarkGEO";
+    font-size: 12px;
 }
 
-#cat-title{
+#filter-title{
     color: #8b8b8b;
     margin-left: 32px;
+    font-size: 13px;
 }
 
-.content-categories input{
+.content-filters input{
     accent-color: var(--input-orange);
     margin-top: 15px;
     margin-right: 8px;
@@ -356,18 +372,24 @@ h4{
 }
 
 
+.years{
+    margin-top:25px;
+}
+
+
 
 /* content item styles */
 
 .content-items{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: max-content;
     grid-gap: 32px;
+    height: 1120px;
 }
 
 .content-item{
     border-radius: 4px;
-    /* border: 1px solid rgb(224, 224, 224); */
     border: 1px solid var(--dark-border);
 
     padding: 24px;
@@ -384,7 +406,7 @@ h4{
 .text-content-title{
     color: var(--text-color);
     font-family: "MarkGEO";
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .text-content-offer{
@@ -450,6 +472,10 @@ h4{
     border: 1px solid var(--input-border);
 }
 
+.content-item:hover{
+        background-color: var(--input-background);
+
+}
 
 /* actives */
 .active-top-header-menu{

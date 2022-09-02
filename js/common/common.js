@@ -177,3 +177,14 @@ export const app = {
         title:'ჭკვიანი კარკასი'
     }]
 }
+
+
+export const params = {
+        skip: '0',
+        limit: '9',
+        cityParam: '',
+        districtParam: '',
+        priceFrom: '',
+        priceTo: '',
+        typeParam: ''
+}
