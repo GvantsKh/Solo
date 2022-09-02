@@ -7,7 +7,7 @@ export function getLink(link, value){
     let res = link;
     
     if(value === null){
-            res = res+'skip='+params[0]+'&limit='+params[1];         
+        res = res+'skip='+params[0]+'&limit='+params[1];         
     }
     else{
         res = res + value +'&skip='+params[0]+'&limit='+params[1];
@@ -22,7 +22,6 @@ export function removeSpaces(text){
         if(text[i] === ' '){
             result = result + '+';
         }
-
         else{
             result = result + text[i];
         }
@@ -63,11 +62,11 @@ export function getFilters (arr, className){
                     }
                 }
             }
-        console.log(arr)
         getContent(getLink(soloUrl, getCheckedValues()));
         })
     }
 }
+
 
 export function getCheckedValues(){
     let cities = '';

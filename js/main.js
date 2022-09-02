@@ -8,7 +8,7 @@ import { getContent, getLink, getFilters } from "./common/filter.js";
 let topMenu = new Devs(app);
 let headerMenu = topMenu._render();
 
-getContent(getLink(params, soloUrl, null));
+getContent(getLink(soloUrl, null));
 
 getFilters(cityParam, 'country');
 getFilters(districtParam, 'district');
