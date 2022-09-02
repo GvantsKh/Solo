@@ -13,3 +13,5 @@ getContent(getLink(params, soloUrl, null));
 getFilters(cityParam, 'country');
 getFilters(districtParam, 'district');
 getFilters(typeParam, 'status')
+
+
