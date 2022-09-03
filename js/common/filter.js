@@ -46,10 +46,11 @@ export function getFilters (arr, className){
     
     let filterItem = document.getElementsByClassName(className);
 
-    for (let i = 0; i < filterItem.length; i++) {
+    for (let i = 1; i < filterItem.length; i++) {
             
         let filterElem = filterItem[i];
         let searchValue = filterElem.value;
+
 
         filterElem.addEventListener('click', () => {
             if(filterElem.checked === true){
@@ -66,6 +67,7 @@ export function getFilters (arr, className){
         })
     }
 }
+
 
 
 export function getCheckedValues(){

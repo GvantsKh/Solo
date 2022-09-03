@@ -58,7 +58,7 @@ export class Devs extends Base {
 
     _getSquare(){
         return this.appJson.square.map((obj) => {
-            return `<input type="radio"><span>${obj.title}</span><br>`
+            return `<input type="radio" class="price"><span>${obj.title}</span><br>`
        })
        .join(" ");
     }

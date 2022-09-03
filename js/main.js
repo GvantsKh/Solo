@@ -14,4 +14,6 @@ getFilters(cityParam, 'country');
 getFilters(districtParam, 'district');
 getFilters(typeParam, 'status')
 
+let price = document.getElementsByClassName('price');
 
+price[0].checked = true;

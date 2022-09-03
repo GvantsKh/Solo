@@ -199,6 +199,7 @@
     margin-top: 32px;
     border-radius: 10px;
     position: relative;
+    width: 100%;
 }
 
 .overlay{
@@ -488,3 +489,61 @@ h4{
 
 
 
+@media screen and (max-width: 996px) {
+
+    .content-filters{
+        display: none;
+    }
+
+    .menu-section{
+        display: none;
+    }
+
+    .top-header-menu{
+        display: none;
+    }
+
+    .slider-img{
+        width: 50%;
+    }
+
+    .content-filter{
+        display: none;
+    }
+
+    .content-items{
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+    }
+    .content-item{
+
+        position: relative;
+        width: 600px;
+        height: 200px;
+        display: flex;
+    }
+    .content-item img{
+        margin-bottom: 8px;
+        height: 105px;
+    }
+    
+    .text-content-title{
+        font-size: 12px;
+    }
+    
+    .text-content-offer{
+        font-size: 14px;
+    }
+    
+    .text-content-desc{
+        font-size: 12px;
+    }
+
+    .content-text{
+        margin-left: 32px;
+    }
+
+    .footer{
+        width: 50%;
+    }
+}

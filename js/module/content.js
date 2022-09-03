@@ -17,10 +17,12 @@ export class Content extends Base {
         return this.appJson.data.items.map((obj) => {
              return `<div class="content-item">
              <img src="./imgs/koxta.JPG" />
-             <span class="text-content-title">${obj.developer}</span><br><br>
-             <span class="text-content-offer">${obj.priceLabel}</span><br>
-             <span class="text-content-desc">${obj.address}</span><br><br>
-             <a class="content-link" href="#">გაიგეთ მეტი</a>
+             <div class="content-text">
+                <span class="text-content-title">${obj.developer}</span><br><br>
+                <span class="text-content-offer">${obj.priceLabel}</span><br>
+                <span class="text-content-desc">${obj.address}</span><br><br>
+                <a class="content-link" href="#">გაიგეთ მეტი</a>
+             </div>
          </div>`
         })
         .join(" ");
