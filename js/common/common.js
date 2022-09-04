@@ -185,3 +185,4 @@ export const params = ['0', '9'];
 export const cityParam =[];
 export const districtParam =[];
 export const typeParam =[];
+export const priceParam =[];

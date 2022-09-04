@@ -1,6 +1,6 @@
 import {Content} from "../module/content.js";
 import { soloUrl } from "./config.js";
-import { params, cityParam, districtParam, typeParam } from "./common.js";
+import { params, cityParam, districtParam, typeParam , priceParam} from "./common.js";
 
 
 export function getLink(link, value){
@@ -24,6 +24,36 @@ export function removeSpaces(text){
         }
         else{
             result = result + text[i];
+        }
+    }
+    return result;
+}
+
+
+
+export function getPriceFrom(text){
+    let result = '';
+
+    for(let i=0; i<text.length; i++){
+        if(text[i] === ' '){
+            break
+        }
+            result = result + text[i];
+    }
+
+    return result;
+}
+
+export function getPriceTo(text){
+    let result = '';
+
+    for(let i=0; i<text.length; i++){
+        if(text[i] === '-'){
+            for(let j = i+1; j<text.length; j++){
+                if(text[j] !== ' '){
+                    result = result + text[j];
+                }
+            }
         }
     }
     return result;
@@ -69,14 +99,15 @@ export function getFilters (arr, className){
 }
 
 
-
 export function getCheckedValues(){
     let cities = '';
     let distr = '';
     let types = '';
+    let priceStart = '?fromParam=';
+    let PriceEnd = '&toParam=';
 
     if(cityParam.length>0){
-        cities = 'cityParam='
+        cities = '&cityParam='
         for(let i = 0 ; i<cityParam.length; i++){
             if(i !== cityParam.length-1){
                 cities += removeSpaces(cityParam[i])+'%2C';
@@ -118,6 +149,16 @@ export function getCheckedValues(){
         }
     }
 
-    let sum = cities+distr+types;
+    if(priceParam.length>0){
+          for(let i=0; i<priceParam.length; i++){
+                priceStart += getPriceFrom(priceParam[i]);
+                PriceEnd += getPriceTo(priceParam[i]);
+        }
+
+    }
+
+
+
+    let sum = priceStart+PriceEnd+cities+distr+types;
     return sum;
 }
