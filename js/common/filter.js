@@ -29,8 +29,6 @@ export function removeSpaces(text){
     return result;
 }
 
-
-
 export function getPriceFrom(text){
     let result = '';
 
@@ -70,11 +68,11 @@ export function getContent(link){
     });
 }
 
-
-
 export function getFilters (arr, className){
     
     let filterItem = document.getElementsByClassName(className);
+
+    allChecked(filterItem, className);
 
     for (let i = 1; i < filterItem.length; i++) {
             
@@ -83,6 +81,7 @@ export function getFilters (arr, className){
 
 
         filterElem.addEventListener('click', () => {
+            filterItem[0].checked = false;
             if(filterElem.checked === true){
                 arr.push(searchValue);
             }
@@ -97,7 +96,6 @@ export function getFilters (arr, className){
         })
     }
 }
-
 
 export function getCheckedValues(){
     let cities = '';
@@ -161,4 +159,23 @@ export function getCheckedValues(){
 
     let sum = priceStart+PriceEnd+cities+distr+types;
     return sum;
+}
+
+export function allChecked( arr, className){
+    if (className !== 'price'){
+        arr[0].addEventListener('click', () =>{
+                for(let i=0; i<arr.length;i++){
+                    if(arr[0].checked === true){
+    
+                        arr[i].checked = true;
+                    }
+                    else{
+                        arr[i].checked = false;
+                    }
+                }
+        })
+    }
+    else{
+        arr[0].checked = true;
+    }
 }
